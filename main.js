@@ -20,14 +20,9 @@ function showThanks() {
     var divShowThanks = document.getElementById("thanks-state");
     var divHideRating = document.getElementById("rating-state");
     
-    
-    if(divShowThanks.style.display === "none") {
-        divShowThanks.style.display = "block";
-        divHideRating.style.display = "none";
-        getRating(val);
-    } else {
-        divShowThanks.style.display = "none";
-    }
+    divHideRating.style.display = "none";
+    divShowThanks.style.display = "block";
+    getRating(val);
 }
 
 function getRating(val) {
