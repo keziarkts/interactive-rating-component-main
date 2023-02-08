@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+      <!-- Rating state start -->
+    <div id="rating-state" class="rating-state">
+      <div class="rating-content">
+        <div class="icon-star-circle">
+          <img src="images/icon-star.svg" alt="icon-star" >
+        </div>
+        
+        <h1 class="title">How did we do?</h1>
+
+        <p class="paragraph">Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!</p> 
+        
+        <div class="rating-numbers" id="select">
+          <button class="number-circle" id="rating-1" name="rating-1" value="1" onclick="getRating(this.value)">1</button>
+          <button class="number-circle" id="rating-2" name="rating-2" value="2" onclick="getRating(this.value)">2</button>
+          <button class="number-circle" id="rating-3" name="rating-3" value="3" onclick="getRating(this.value)">3</button>
+          <button class="number-circle" id="rating-4" name="rating-4" value="4" onclick="getRating(this.value)">4</button>
+          <button class="number-circle" id="rating-5" name="rating-5" value="5" onclick="getRating(this.value)">5</button>
+        </div>
+
+        <button id="submit" class="submit-btn" onclick="showThanks()">SUBMIT</button>
+      </div>     
+    </div>
+      <!-- Rating state end -->
+
+
+      <!-- Thank you state start -->
+    <div id="thanks-state" class="thanks-state">
+      <img src="images/illustration-thank-you.svg" alt="thank-you">
+      <div class="result">
+        <p class="result-text">You selected <span id="result"></span> out of 5</p>
+      </div>
+
+      <h1 class="title title-thanks">Thank you!</h1>
+
+      <p class="paragraph paragraph-thanks">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+
+    </div>
+      <!-- Thank you state end -->
+
+  
+<script src="main.js"></script>
+
+</body>
+</html>
